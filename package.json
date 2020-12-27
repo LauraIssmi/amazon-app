@@ -1,0 +1,29 @@
+{
+	"name": "amazon",
+	"type": "module",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/LauraIssmi/amazon.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/LauraIssmi/amazon/issues"
+	},
+	"homepage": "https://github.com/LauraIssmi/amazon#readme",
+	"dependencies": {
+		"express": "^4.17.1"
+	},
+	"devDependencies": {
+		"eslint": "^7.16.0",
+		"eslint-plugin-react": "^7.21.5",
+		"nodemon": "^2.0.6"
+	}
+}
