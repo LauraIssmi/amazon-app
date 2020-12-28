@@ -94,6 +94,13 @@ a.brand {
 	font-size: 3rem;
 	font-weight: bold;
 }
+.badge {
+	background-color: red;
+	color: white;
+	border-radius: 50%;
+	padding: 0.2rem 0.7rem;
+	font-size: 1.4rem;
+}
 .row {
 	display: flex;
 	flex-wrap: wrap;
