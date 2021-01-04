@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { createOrder } from "../actions/orderActions";
 import CheckoutSteps from "../components/CheckoutSteps";
 import { ORDER_CREATE_RESET } from "../constants/orderConstants";
-import { cartReducer } from "../reducers/cartReducers";
 import MessageBox from "../components/MessageBox";
 import LoadingBox from "../components/LoadingBox";
 export default function PlaceOrderScreen(props) {
