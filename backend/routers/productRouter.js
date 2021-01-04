@@ -43,7 +43,7 @@ productRouter.post(
 	expressAsyncHandler(async (req, res) => {
 		const product = new Product({
 			name: "smale name " + Date.now(),
-			image: "../images/p1.1.PNG",
+			image: "../images/monteau.PNG",
 			price: 0,
 			category: "sample category",
 			brand: "sample brand",
