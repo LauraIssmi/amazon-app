@@ -33,3 +33,6 @@
     1. build api for delete users
     2. create order details constant, action and reducer
     3. Use action in UserListScreen
+48. Edit User
+    1. build api for update users
+    2. create edit screen UI
