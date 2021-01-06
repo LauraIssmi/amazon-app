@@ -107,8 +107,8 @@ export default function ProductEditScreen(props) {
 						<div>
 							<label htmlFor="imageFile">Image File</label>
 							<input type="file" id="imageFile" label="Choose Image" onChange={uploadFileHandler}></input>
-							{loadingUpdate && <LoadingBox></LoadingBox>}
-							{errorUpdate && <MessageBox variant="danger">{errorUpload}</MessageBox>}
+							{loadingUpload && <LoadingBox></LoadingBox>}
+							{errorUpload && <MessageBox variant="danger">{errorUpload}</MessageBox>}
 						</div>
 						<div>
 							<label htmlFor="category">Category</label>
