@@ -33,6 +33,12 @@
     1. build api for delete users
     2. create order details constant, action and reducer
     3. Use action in UserListScreen
-48. Edit User
+47. Edit User
     1. build api for update users
     2. create edit screen UI
+48. Implement Seller View
+    1. add seller menu
+    2. create seller route
+    3. list products for seller
+    4. list orders for seller
+    5. add Seller to Product List and Details Screen
