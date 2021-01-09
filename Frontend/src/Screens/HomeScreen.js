@@ -9,6 +9,7 @@ import { listTopSellers } from "../actions/userActions";
 
 import { Link } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export default function HomeScreen() {
 	const dispatch = useDispatch();
@@ -32,7 +33,7 @@ export default function HomeScreen() {
 			) : (
 				<>
 					{sellers.length === 0 && <MessageBox>No seller Found</MessageBox>}
-					<Carousel showArrows autoPlay showThumbs={false}>
+					<Carousel showArrows={true} showIndicators autoPlay showThumbs={false}>
 						{sellers.map((seller) => (
 							<div key={seller._id}>
 								<Link to={`/seller/${seller._id}`}>
