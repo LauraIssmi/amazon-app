@@ -11,11 +11,22 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/amazona", {
-	useNewUrlParser: true,
-	useUnifiedTopology: true,
-	useCreateIndex: true,
-});
+
+const URI = "mongodb+srv://admin:admin@amazon.j9xhc.mongodb.net/test?retryWrites=true&w=majority";
+
+const connectDB = async () => {
+	try {
+		await mongoose.connect(URI, {
+			useNewUrlParser: true,
+			useUnifiedTopology: true,
+			useCreateIndex: true,
+		});
+		console.log("connected");
+	} catch (error) {
+		console.log(error.message);
+	}
+};
+
 app.use("/api/uploads", uploadRouter);
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
@@ -34,7 +45,9 @@ app.get("*", (req, res) => res.sendFile(path.join(__dirname, "/Frontend/build/in
 app.use((err, req, res, next) => {
 	res.status(500).send({ message: err.message });
 });
+
+connectDB();
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
-	console.log(`Serve at http://localhost:${port}`);
+	console.log(`Serve at http:${port}`);
 });
